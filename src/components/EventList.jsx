@@ -3,7 +3,7 @@ import EventCard from "./EventCard";
 
 function EventList(){
     return(
-        <section>
+        <section className="event-list">
             <h2>Veranstaltungen</h2>
 
             {events.map((event) => {
