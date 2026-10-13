@@ -1,26 +1,40 @@
-import events from "../data/events";
-import EventCard from "./EventCard";
+const events =[
+    {
+        id: 1,
+        title: "JavaScript Workshop",
+        date: "2026-10-19",
+        location: "Erfurt",
+        eventType: "Workshop",
+        seats: 12,
+        online: false
+    },
+    {
+        id: 2,
+        title: "React Grundlagen",
+        date: "2026-10-22",
+        location: "Online",
+        eventType: "Webinar",
+        seats: 20,
+        online: true
+    },
+    {
+        id: 3,
+        title: "Frontend Meetup",
+        date: "2026-10-26",
+        location: "Jena",
+        eventType: "Meetup",
+        seats: 0,
+        online: false
+    },
+    {
+        id: 4, // <--- Geändert von 3 auf 4!
+        title: "Angeln",
+        date: "2026-10-28",
+        location: "Alter Fischereihof Oelzschau",
+        eventType: "Meetup",
+        seats: 25,
+        online: false
+    }
+];
 
-function EventList(){
-    return(
-        <section className="event-list">
-            <h2>Veranstaltungen</h2>
-
-            {events.map((event) => {
-                return (
-                    <EventCard 
-                        key={event.id}
-                        title={event.title}
-                        date={event.date}
-                        location={event.location}
-                        eventType={event.eventType}
-                        seats={event.seats}
-                        online={event.online}
-                    />
-                );
-            })}
-        </section>
-    );
-}
-
-export default EventList;
+export default events;
